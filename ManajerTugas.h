@@ -18,7 +18,7 @@ public:
     void tampilkanSemua();
     void cariTugas();
     void sortByDeadline();
-
+    void sortByPrioritas();
     void loadFile(string filename);
     void saveFile(string filename);
 };

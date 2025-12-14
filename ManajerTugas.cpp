@@ -64,12 +64,11 @@ void ManajerTugas::editTugas() {
             cout << "Tugas berhasil diperbarui!\n";
             return;
         }
-        else(
-            
-        )
+        else{
+            cout << "ID itu tidak ada\n";
+            return;
+        }
     }
-
-    cout << "ID tidak ditemukan!\n";
 }
 
 void ManajerTugas::deleteTugas() {
@@ -123,7 +122,13 @@ void ManajerTugas::sortByDeadline() {
 
     cout << "Tugas berhasil diurutkan berdasarkan deadline.\n";
 }
-
+void ManajerTugas::sortByPrioritas(){
+    sort(daftarTugas.begin(), daftarTugas.end(),
+        [](const Tugas &a, const Tugas &b){
+            return a.prioritas < b.prioritas;
+        });
+    cout << "Tugas berhasil diurutkan berdasarkan prioritas.\n";
+}
 void ManajerTugas::loadFile(string filename) {
     ifstream file(filename);
     if (!file.is_open()) {

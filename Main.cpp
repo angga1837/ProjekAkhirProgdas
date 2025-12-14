@@ -16,8 +16,9 @@ int main() {
         cout << "4. Tampilkan Semua\n";
         cout << "5. Cari Tugas\n";
         cout << "6. Sort by Deadline\n";
-        cout << "7. Load File (input.txt)\n";
-        cout << "8. Save File (output.txt)\n";
+        cout << "7. Sort by Prioritas\n";
+        cout << "8. Load File (input.txt)\n";
+        cout << "9. Save File (output.txt)\n";
         cout << "0. Keluar\n";
         cout << "Pilihan: ";
         cin >> pilihan;
@@ -30,8 +31,9 @@ int main() {
             case 4: app.tampilkanSemua(); break;
             case 5: app.cariTugas(); break;
             case 6: app.sortByDeadline(); break;
-            case 7: app.loadFile("input.txt"); break;
-            case 8: app.saveFile("output.txt"); break;
+            case 7: app.sortByPrioritas(); break;
+            case 8: app.loadFile("input.txt"); break;
+            case 9: app.saveFile("output.txt"); break;
             case 0: return 0;
             default: cout << "Pilihan tidak valid!\n";
         }
